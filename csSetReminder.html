@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clientSatisfactionCSS.css">
+    <title>Set Reminder</title>
+</head>
+<body>
+    <!-- nav menu -->
+    <nav id = "navContainer">
+        <!-- Follow up item -->
+        <div class = "navFlexItem">
+            <a href="csFollowUp.html">
+                Follow up
+            </a>
+        </div>
+        
+        <!-- Feedback item -->
+        <div class = "navFlexItem">
+            <a href="csFeedback.html">
+                Feedback
+            </a>
+        </div>
+    </nav>
+
+    <!-- main content container -->
+    <div class = mainContentDiv>
+        <!-- left segment -->
+        <div class = leftSegment>
+            
+        </div>
+        <div id = "currentTimeDisplay"></div>
+        <!-- main segment -->
+        <div class = mainSegment>
+            <!-- title -->
+            <div class = contentTitle> 
+                Reminder
+            </div> 
+            
+            <!-- form component container -->
+            
+            <div class = "formContainer">
+                <table id = "tableFollowUp">
+                    <tr>
+                        <th>
+                            c1r1
+                        </th>
+                        <th>
+                            c2r1
+                        </th>
+                        <th>
+                            c3r1
+                        </th>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            c1r2
+                        </td>
+                        <td>
+                            c2r2
+                        </td>
+                        <td>
+                            c2r2
+                        </td>
+                    </tr>
+                </table>
+                <form id = "frmReminder" class = "formComponent">
+                    Reminder ID: <input type = "number" id = "reminderID" class = "frmTxtField"><br/>
+                    Reminder: <input type = "text" id = "reminderReminder" class = "frmTxtField"><br/>
+                    Reminder Date: <input type ="date" id= "reminderDate" class = "frmTxtField"><br/>
+                    <input type="button" value = "Insert" id = "btnInsert" class="button">
+                    <input type="button" value = "Update" id = "btnUpdate" class="button">
+                    <input type="button" value = "Delete" id = "btnDelete" class="button">
+                </form>
+            </div>
+        </div>
+
+        <!-- right segment -->
+        <div class = rightSegment>
+            
+        </div>
+    </div>
+    <script src="csSetReminderScript.js"></script>
+</body>
+</html>

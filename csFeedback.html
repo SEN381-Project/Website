@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clientSatisfactionCSS.css">
+    <title>Feedback</title>
+</head>
+<body>
+    <!-- nav menu -->
+    <nav id = "navContainer">
+        <!-- Follow up item -->
+        <div class = "navFlexItem">
+            <a href="csFollowUp.html">
+                Follow up
+            </a>
+        </div>
+        
+        <!-- Feedback item -->
+        <div class = "navFlexItem">
+            <a href="csFeedback.html">
+                Feedback
+            </a>
+        </div>
+    </nav>
+
+    <!-- main content container -->
+    <div class = mainContentDiv>
+        <!-- left segment -->
+        <div class = leftSegment>
+            
+        </div>
+
+        <!-- main segment -->
+        <div class = mainSegment>
+            <!-- title -->
+            <div class = contentTitle> 
+                Feedback
+            </div> 
+            <!-- form component container -->
+            
+            <div class = "formContainer">
+                <table id = "tableFollowUp">
+                    <tr>
+                        <th>
+                            c1r1
+                        </th>
+                        <th>
+                            c2r1
+                        </th>
+                        <th>
+                            c3r1
+                        </th>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            c1r2
+                        </td>
+                        <td>
+                            c2r2
+                        </td>
+                        <td>
+                            c2r2
+                        </td>
+                    </tr>
+                </table>
+                <form id = "frmFollowUp" class = "formComponent">
+                    Feedback ID: <input type = "number" id = "feedbackID" class = "frmTxtField"><br/>
+                    Problem: <input type = "text" id = "feedbackProblem" class = "frmTxtField"><br/>
+                    Helped on Time: <input type ="checkbox" id= "followupDate" class = "frmCheckbox"><br/>
+                    Comment: <input type = "text" id = "feedbackComment" class = "frmTxtField"><br/>
+                    Feedback date: <input type = "date" id = "feedbackDate" class = "frmTxtField"><br/>
+                    <input type="button" value = "Insert" id = "btnInsert" class="button">
+                    <input type="button" value = "Update" id = "btnUpdate" class="button">
+                    <input type="button" value = "Delete" id = "btnDelete" class="button">
+                </form>
+            </div>
+        </div>
+
+        <!-- right segment -->
+        <div class = rightSegment>
+            
+        </div>
+    </div>
+    
+</body>
+</html>

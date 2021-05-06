@@ -7,70 +7,18 @@ body
     background-color: rgb(20,20,20);
     margin: 0px;
     font-family: 'Roboto', sans-serif;
-    color: white;
 }
 
 a
 {
     color: rgb(200,200,200);
     text-decoration: none;
-    z-index: 1;
 }
 
 a:hover
 {
     color: rgb(102, 112, 233);
     text-decoration: underline;
-}
-
-table, th, td
-{
-    border: 3px solid black;
-    border-collapse: collapse;
-    padding: 50px;
-}
-
-.rainbowHome
-{
-    /* positioning */
-    position: relative;
-    top: 100px;
-    /* margin */
-    margin: auto;
-    z-index: 0;
-    /* sizing */
-    width: 300px;
-    height: 300px;
-    /* borders */
-    border-radius: 50%;
-    /* colors */
-    background-image: linear-gradient(red, yellow, green, purple, blue);
-    filter: blur(10px);
-    /* animation */
-    animation: homeRainbow infinite 1s linear;
-
-}
-@keyframes homeRainbow 
-{
-    from {filter: hue-rotate(0deg); transform: rotate(0deg); filter: blur(14px);}
-    to {filter: hue-rotate(360deg); transform: rotate(360deg); filter: blur(14px);}
-}
-
-.rainbowUpperZOrderElement
-{
-    position: relative;
-    display: flex;
-    margin: auto;
-    top: -190px;
-    z-index: 5;
-    font-family: cursive;
-    background-color: rgb(20,20,20);
-    border-radius: 50%;
-    width: 290px;
-    height: 290px;
-    justify-content: center;
-    align-items: center;
-    font-size: 80px;
 }
 
 .contentTitle
@@ -100,7 +48,7 @@ table, th, td
     /* colors + font */
     font-family: 'Roboto-thin', sans-serif;
     color: black;
-    background-color: rgb(102, 112, 233);
+    background-color: rgb(122, 132, 253);
     /* animation */
     transition: all 0.2s;
 }
@@ -118,7 +66,7 @@ table, th, td
     /* colors + font */
     font-family: 'Roboto-thin', sans-serif;
     color: white;
-    background-color: rgb(142, 152, 273);
+    background-color: rgb(122, 132, 253);
     /* animation */
     transition: all 0.2s;
 }
@@ -203,6 +151,8 @@ table, th, td
     background-color: rgb(20,20,20);
 }
 
+/* Home form */
+
 /* Follow up */
 #frmFollowUp
 {
@@ -216,6 +166,36 @@ table, th, td
     background-color: rgb(30,30,30);
 }
 
+#followupID
+{
+
+}
+
+#followupStatus
+{
+
+}
+
+#followupDate
+{
+
+}
+
+#btnInsert
+{
+
+}
+
+#btnUpdate
+{
+
+}
+
+#btnDelete
+{
+
+}
+
 #tableFollowUp
 {
     margin: auto;
@@ -226,16 +206,20 @@ table, th, td
     display: flex;
 }
 
-/* Reminder */
-#currentTimeDisplay
+/* technictian  */
+#frmTechnician
 {
-    /* positioning */
-    position: absolute;
-    top: 85px;
-    left: 40.7%;
-    z-index: -1;
-    /* sizing */
-    font-size: 30px;
-    /* colors */
-    color: crimson;
+    
+}
+
+/* feedback */
+#feedbackFormTableContainer
+{
+
+}
+
+/* employee */
+#frmDepartment
+{
+    margin-top: 0px;
 }

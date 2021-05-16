@@ -71,9 +71,9 @@
                     Reminder ID: <input type = "number" id = "reminderID" class = "frmTxtField"><br/>
                     Reminder: <input type = "text" id = "reminderReminder" class = "frmTxtField"><br/>
                     Reminder Date: <input type ="date" id= "reminderDate" class = "frmTxtField"><br/>
-                    <input type="button" value = "Insert" id = "btnInsert" class="button">
-                    <input type="button" value = "Update" id = "btnUpdate" class="button">
-                    <input type="button" value = "Delete" id = "btnDelete" class="button">
+                    <input type="button" onclick="Insert(reminderID.value, reminderReminder.value, reminderDate.value)" value = "Insert" id = "btnInsert" class="button">
+                    <input type="button" onclick="Update(reminderID.value, reminderReminder.value, reminderDate.value)" value = "Update" id = "btnUpdate" class="button">
+                    <input type="button" onclick="Delete(reminderID.value, reminderReminder.value, reminderDate.value)" value = "Delete" id = "btnDelete" class="button">
                 </form>
             </div>
         </div>

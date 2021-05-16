@@ -1,7 +1,4 @@
 document.getElementById("btnSetReminder").onclick = OpenSetReminderSite;
-document.getElementById("btnInsert").onclick = InsertFollowUP;
-document.getElementById("btnUpdate").onclick = UpdateFollowUP;
-document.getElementById("btnDelete").onclick = DeleteFollowUP;
 
 function OpenSetReminderSite() 
 {
@@ -9,15 +6,14 @@ function OpenSetReminderSite()
     window.location.replace("/csSetReminder");
 }
 
-function InsertFollowUP() {
-    console.log("Insert object here");
-    
+function InsertFollowUP(id, status, date) {
+    console.log(`Insert this ${id} ${status} ${date}`);
 }
 
-function UpdateFollowUP() {
-    console.log("Update object here");
+function UpdateFollowUP(id, status, date) {
+    console.log(`Update this ${id} ${status} ${date}`);
 }
 
-function DeleteFollowUP() {
-    console.log("Delete object here");
+function DeleteFollowUP(id) {
+    console.log(`Delete this ${id}`);
 }

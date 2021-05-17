@@ -8,10 +8,11 @@ function OpenSetReminderSite()
 
 async function InsertFollowUP(id, status, date) {
     console.log(`Insert this ${id} ${status} ${date}`);
+    // removing id because ID is now auto generated
+    // naming according to API naming convention
     const data = {
-        id: id,
-        status: status,
-        date: date
+        FollowupStatus: status,
+        FollowupDate: date
     }
     console.log(data);
     // POST request
@@ -27,33 +28,35 @@ async function InsertFollowUP(id, status, date) {
     //    console.log(res);
     //});
     // from a normal method and bot usinf 2 .then functions to await async
-    const response = await fetch('/followUp', options);
+    const response = await fetch('http://localhost:3000/db/followUp', options);
     const responseData = await response.json();
     console.log(responseData);
 }
 
-function UpdateFollowUP(id, status, date) {
+async function UpdateFollowUP(id, status, date) {
     console.log(`Update this ${id} ${status} ${date}`);
+    // removing id because ID is now auto generated
+    // naming according to API naming convention
     const data = {
-        id: id,
-        status: status,
-        date: date
+        FollowupStatus: status,
+        FollowupDate: date
     }
     
     // PATCH/PUT request
     const options = {
-        method: 'PUT',
+        method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
     };
-    const response = await fetch('/followUp', options);
+    const finalLink = 'http://localhost:3000/db/followUp/' + id;
+    const response = await fetch(finalLink, options);
     const responseData = await response.json();
     console.log(responseData);
 }
 
-function DeleteFollowUP(id) {
+async function DeleteFollowUP(id) {
     console.log(`Delete this ${id}`);
     let data = {
         id: id
@@ -67,7 +70,8 @@ function DeleteFollowUP(id) {
         },
         body: JSON.stringify(data)
     };
-    const response = await fetch('/followUp', options);
+    const finalLink = 'http://localhost:3000/db/followUp/' + id;
+    const response = await fetch(finalLink, options);
     const responseData = await response.json();
     console.log(responseData);
 }

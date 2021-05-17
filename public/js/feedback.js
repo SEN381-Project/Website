@@ -27,7 +27,11 @@ function Insert()
 
     var feedBackObj = {ID:ID, problem:problem, helpedOnTime:helpedOnTime, comment:comment, date:date};
 
-    //fetch('http://localhost:8080', {method: 'POST', body: feedBackObj}).then(results => results.json()).then(console.log);
+    const options = {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(feedBackObj)
+    }
 
-    console.log(feedBackObj);
+    fetch('http://localhost:3000/feedback', options);
 }

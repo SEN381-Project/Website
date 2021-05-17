@@ -27,7 +27,7 @@ async function InsertFollowUP(id, status, date) {
     //    console.log(res);
     //});
     // from a normal method and bot usinf 2 .then functions to await async
-    const response = await fetch('http://localhost:3000/', options);
+    const response = await fetch('/followUp', options);
     const responseData = await response.json();
     console.log(responseData);
 }
@@ -40,7 +40,17 @@ function UpdateFollowUP(id, status, date) {
         date: date
     }
     
-    // PATCH request
+    // PATCH/PUT request
+    const options = {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    };
+    const response = await fetch('/followUp', options);
+    const responseData = await response.json();
+    console.log(responseData);
 }
 
 function DeleteFollowUP(id) {
@@ -50,6 +60,16 @@ function DeleteFollowUP(id) {
     }
     console.log(data);
     // DELETE request 
+    const options = {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    };
+    const response = await fetch('/followUp', options);
+    const responseData = await response.json();
+    console.log(responseData);
 }
 
 

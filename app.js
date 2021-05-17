@@ -4,8 +4,9 @@ const app = express();
 const port = 8080;
 const HOST = '0.0.0.0';
 
-// Statuc files
+// Static files
 app.use(express.static('public'));
+app.use(express.json());
 app.use('/css', express.static(__dirname + 'public/css'))
 app.use('/js', express.static(__dirname + 'public/js'))
 
@@ -28,6 +29,11 @@ app.get('/csFollowUp', (req, res) => {
 app.get('/csSetReminder', (req, res) => {
     res.render('csSetReminder');
 })
-// listen in port 8080
+
+app.post('/', (req, res) => {
+    console.log(req.body);
+});
+
+// listen to port 8080
 app.listen(port, () => console.info(`Server started, running on https://${HOST}:${port}`));
 // changed package.json .. the entry point was specified as index.js changed it to app.js

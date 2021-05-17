@@ -12,14 +12,27 @@ function DisplayCurrentTime()
 function Insert(id, text, date) 
 {
     alert("Inserting: " + id + ", " + text + ", " + date);
+    let obj = {
+        id: id,
+        text: text,
+        date: date
+    }
 }
 
 function Update(id, text, date) 
 {
     alert("Updating: " + id + ", to: " + text + ", " + date);
+    let obj = {
+        id: id,
+        text: text,
+        date: date
+    }
 }
 
 function Delete(id) 
 {
     alert("Deleting: " + id);
+    let obj = {
+        id: id,
+    }
 }

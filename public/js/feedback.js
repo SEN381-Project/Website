@@ -69,7 +69,8 @@ async function Update()
         body: JSON.stringify(feedBackObj)
     }
 
-    const response = await fetch('http://localhost:3000/db/feedback/' + ID, options);
+    const finalLink = 'http://localhost:3000/db/feedback/' + ID;
+    const response = await fetch(finalLink, options);
     const responseData = await response.json();
     console.log(responseData);
 }
@@ -89,7 +90,8 @@ async function Delete()
         body: JSON.stringify(feedBackObj)
     }
 
-    const response = await fetch('http://localhost:3000/db/feedback/' + ID, options);
+    const finalLink = 'http://localhost:3000/db/feedback/' + ID;
+    const response = await fetch(finalLink, options);
     const responseData = await response.json();
     console.log(responseData);
 }

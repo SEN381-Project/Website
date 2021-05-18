@@ -11,14 +11,9 @@ function DisplayCurrentTime()
 
 async function Insert(id, text, date) 
 {
-    alert("Inserting: " + id + ", " + text + ", " + date);
     let obj = {
-        ReminderText: {
-            type: text
-        },
-        ReminderDate: {
-            type: date
-        }
+        ReminderText: text,
+        ReminderDate: date
     }
     const options = {         
         method: 'POST',         
@@ -32,14 +27,9 @@ async function Insert(id, text, date)
 
 async function Update(id, text, date) 
 {
-    alert("Updating: " + id + ", to: " + text + ", " + date);
     let obj = {
-        ReminderText: {
-            type: text
-        },
-        ReminderDate: {
-            type: date
-        }
+        ReminderText: text,
+        ReminderDate: date
     }
 
     const options = {
@@ -57,7 +47,6 @@ async function Update(id, text, date)
 
 async function Delete(id) 
 {
-    alert("Deleting: " + id);
     let obj = {
         id: id
     }

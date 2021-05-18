@@ -1,6 +1,6 @@
 const { reset } = require("nodemon");
 
-function Insert()
+async function Insert()
 {
     var onTime;
 
@@ -25,7 +25,7 @@ function Insert()
     document.getElementById("feedbackComment").value = "";
     document.getElementById("feedbackDate").value = "";
 
-    var feedBackObj = {ID:ID, problem:problem, helpedOnTime:helpedOnTime, comment:comment, date:date};
+    var feedBackObj = {Problem: {type: problem}, HelpedOnTime: {type: helpedOnTime}, Comment: {type: comment}, FeedbackDate : {type: date}};
 
     const options = {
         method: 'POST',
@@ -33,10 +33,12 @@ function Insert()
         body: JSON.stringify(feedBackObj)
     }
 
-    fetch('http://localhost:3000/feedback', options);
+    const response = await fetch('http://localhost:3000/db/feedback', options);
+    const responseData = await response.json();
+    console.log(responseData);
 }
 
-function Update()
+async function Update()
 {
     var onTime;
 
@@ -61,7 +63,7 @@ function Update()
     document.getElementById("feedbackComment").value = "";
     document.getElementById("feedbackDate").value = "";
 
-    var feedBackObj = {ID:ID, problem:problem, helpedOnTime:helpedOnTime, comment:comment, date:date};
+    var feedBackObj = {Problem: {type: problem}, HelpedOnTime: {type: helpedOnTime}, Comment: {type: comment}, FeedbackDate : {type: date}};
 
     const options = {
         method: 'PATCH',
@@ -69,7 +71,9 @@ function Update()
         body: JSON.stringify(feedBackObj)
     }
 
-    fetch('http://localhost:3000/feedback', options);
+    const response = await fetch('http://localhost:3000/db/feedback/' + ID, options);
+    const responseData = await response.json();
+    console.log(responseData);
 }
 
 function Delete()
@@ -87,5 +91,7 @@ function Delete()
         body: JSON.stringify(feedBackObj)
     }
 
-    fetch('http://localhost:3000/feedback', options);
+    const response = await fetch('http://localhost:3000/db/feedback/' + ID, options);
+    const responseData = await response.json();
+    console.log(responseData);
 }

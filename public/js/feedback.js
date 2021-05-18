@@ -25,7 +25,7 @@ async function Insert()
     document.getElementById("feedbackComment").value = "";
     document.getElementById("feedbackDate").value = "";
 
-    var feedBackObj = {Problem: {type: problem}, HelpedOnTime: {type: helpedOnTime}, Comment: {type: comment}, FeedbackDate : {type: date}};
+    var feedBackObj = {Problem:problem, HelpedOnTime:helpedOnTime, Comment:comment, FeedbackDate:date};
 
     const options = {
         method: 'POST',
@@ -63,7 +63,7 @@ async function Update()
     document.getElementById("feedbackComment").value = "";
     document.getElementById("feedbackDate").value = "";
 
-    var feedBackObj = {Problem: {type: problem}, HelpedOnTime: {type: helpedOnTime}, Comment: {type: comment}, FeedbackDate : {type: date}};
+    var feedBackObj = {Problem:problem, HelpedOnTime:helpedOnTime, Comment:comment, FeedbackDate:date};
 
     const options = {
         method: 'PATCH',

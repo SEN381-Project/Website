@@ -76,7 +76,7 @@ async function Update()
     console.log(responseData);
 }
 
-function Delete()
+async function Delete()
 {
     let ID = document.getElementById("feedbackID").value;
     //alert(ID);
